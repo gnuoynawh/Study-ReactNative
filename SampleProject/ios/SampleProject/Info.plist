@@ -52,12 +52,12 @@
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
 
-	<!-- for camera 
+	<!-- for camera -->
 	<key>NSCameraUsageDescription</key>
 	<string>For taking photos</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>For saving photos</string>
--->
+
 
 </dict>
 </plist>

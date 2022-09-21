@@ -7,6 +7,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import DrawerNavigator from './src/screen/DrawerNavigator';
 
 function App() {
+    console.log('TEST', `start App!` );
     return (
       <NavigationContainer>
         <DrawerNavigator />
