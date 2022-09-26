@@ -7,47 +7,47 @@ import { Camera, useCameraDevices } from 'react-native-vision-camera';
 
 function CameraTest() {
 
-  const cameraRef = React.useRef();
-  const [isCameraInitialized, setIsCameraInitialized] = useState(false);
-  const devices = useCameraDevices();
-  const device = devices.back;
+  // const cameraRef = React.useRef();
+  // const [isCameraInitialized, setIsCameraInitialized] = useState(false);
+  // const devices = useCameraDevices();
+  // const device = devices.back;
 
-  const onCameraInitialized = useCallback(() => {
-    console.log('Camera initialized!');
-    setIsCameraInitialized(true);
-  }, []);
+  // const onCameraInitialized = useCallback(() => {
+  //   console.log('Camera initialized!');
+  //   setIsCameraInitialized(true);
+  // }, []);
 
-  const handleCapture = useCallback(async () => {
-    try {
+  // const handleCapture = useCallback(async () => {
+  //   try {
       
-      console.log("Click Me!");
+  //     console.log("Click Me!");
 
-      if(cameraRef && cameraRef.current && isCameraInitialized) {
+  //     if(cameraRef && cameraRef.current && isCameraInitialized) {
   
-        const img = await cameraRef.current.takePhoto({
-          enableAutoStabilization: true,
-          skipMetadata: true,
-          photoCodec: 'jpeg',
-          quality: 100,
-        });
+  //       const img = await cameraRef.current.takePhoto({
+  //         enableAutoStabilization: true,
+  //         skipMetadata: true,
+  //         photoCodec: 'jpeg',
+  //         quality: 100,
+  //       });
         
-        console.log(img);
-      }
+  //       console.log(img);
+  //     }
     
-    } catch (error) {
+  //   } catch (error) {
       
-      console.log("Error!");
-      console.log({error});
+  //     console.log("Error!");
+  //     console.log({error});
   
-    }
-  },[cameraRef, isCameraInitialized]);
+  //   }
+  // },[cameraRef, isCameraInitialized]);
 
-  if (device == null)
-    return <LoadingView />
+  // if (device == null)
+  //   return <LoadingView />
 
   return(
     <View style={{flex: 1}}>
-      <Camera
+      {/* <Camera
         ref={cameraRef}
         style={StyleSheet.absoluteFill}
         onInitialized={onCameraInitialized}
@@ -55,14 +55,14 @@ function CameraTest() {
         isActive={true}
         enableZoomGesture={false}
         photo={true}
-        orientation="portrait"/>
+        orientation="portrait"/> */}
 
       <View>
-        <TouchableOpacity 
+        {/* <TouchableOpacity 
           style={{width: 100, height: 100, backgroundColor: 'white', justifyContent: 'center'}}
           onPress={handleCapture}>
               <Text>Click me</Text>
-          </TouchableOpacity>
+          </TouchableOpacity> */}
       </View>
     </View>
   )

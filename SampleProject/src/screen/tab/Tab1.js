@@ -3,12 +3,13 @@ import React from 'react';
 
 // import
 import { StyleSheet, View, Text } from 'react-native';
+import Screen from '../../component/Screen';
 
 function Tab1({ navigation }) {
   return(
-    <View style={styles.container}>
+    <Screen style={styles.container}>
       <Text>Hello! Tab1</Text>
-    </View>
+    </Screen>
   )
 }
 export default Tab1;
