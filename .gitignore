@@ -1,5 +1,5 @@
-# Created by https://www.toptal.com/developers/gitignore/api/android,androidstudio,xcode,cocoapods,swift,objective-c,reactnative,osx,intellij
-# Edit at https://www.toptal.com/developers/gitignore?templates=android,androidstudio,xcode,cocoapods,swift,objective-c,reactnative,osx,intellij
+# Created by https://www.toptal.com/developers/gitignore/api/android,androidstudio,xcode,cocoapods,swift,objective-c,osx,macos,reactnative,intellij,visualstudiocode
+# Edit at https://www.toptal.com/developers/gitignore?templates=android,androidstudio,xcode,cocoapods,swift,objective-c,osx,macos,reactnative,intellij,visualstudiocode
 
 ### Android ###
 # Gradle files
@@ -163,6 +163,39 @@ fabric.properties
 # https://plugins.jetbrains.com/plugin/8053-azure-toolkit-for-intellij
 .idea/**/azureSettings.xml
 
+### macOS ###
+# General
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon must end with two \r
+Icon
+
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+### macOS Patch ###
+# iCloud generated files
+*.icloud
+
 ### Objective-C ###
 # Xcode
 #
@@ -230,32 +263,14 @@ iOSInjectionProject/
 
 ### OSX ###
 # General
-.DS_Store
-.AppleDouble
-.LSOverride
 
 # Icon must end with two \r
-Icon
-
 
 # Thumbnails
-._*
 
 # Files that might appear in the root of a volume
-.DocumentRevisions-V100
-.fseventsd
-.Spotlight-V100
-.TemporaryItems
-.Trashes
-.VolumeIcon.icns
-.com.apple.timemachine.donotpresent
 
 # Directories potentially created on remote AFP share
-.AppleDB
-.AppleDesktop
-Network Trash Folder
-Temporary Items
-.apdisk
 
 ### ReactNative ###
 # React Native Stack Base
@@ -524,6 +539,31 @@ Dependencies/
 # https://github.com/johnno1962/injectionforxcode
 
 
+### VisualStudioCode ###
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+
+# Local History for Visual Studio Code
+.history/
+
+# Built Visual Studio Code Extensions
+*.vsix
+
+### VisualStudioCode Patch ###
+# Ignore all local history of files
+.history
+.ionide
+
+# Support for Project snippet scope
+.vscode/*.code-snippets
+
+# Ignore code-workspaces
+*.code-workspace
+
 ### Xcode ###
 
 
@@ -645,4 +685,4 @@ hs_err_pid*
 
 !/gradle/wrapper/gradle-wrapper.jar
 
-# End of https://www.toptal.com/developers/gitignore/api/android,androidstudio,xcode,cocoapods,swift,objective-c,reactnative,osx,intellij
+# End of https://www.toptal.com/developers/gitignore/api/android,androidstudio,xcode,cocoapods,swift,objective-c,osx,macos,reactnative,intellij,visualstudiocode
