@@ -88,47 +88,38 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 
 const Tab = createBottomTabNavigator();
 
-function MyTabs() {
-  return (
-    <Tab.Navigator
-      initialRouteName="Feed"
-      screenOptions={{
-        tabBarActiveTintColor: '#e91e63',
-      }}
-    >
-      <Tab.Screen
-        name="Feed"
-        component={Feed}
-        options={{
-          tabBarLabel: 'Home',
-          tabBarIcon: ({ color, size }) => (
-            <MaterialCommunityIcons name="home" color={color} size={size} />
-          ),
-        }}
-      />
-      <Tab.Screen
-        name="Notifications"
-        component={Notifications}
-        options={{
-          tabBarLabel: 'Updates',
-          tabBarIcon: ({ color, size }) => (
-            <MaterialCommunityIcons name="bell" color={color} size={size} />
-          ),
-          tabBarBadge: 3,
-        }}
-      />
-      <Tab.Screen
-        name="Profile"
-        component={Profile}
-        options={{
-          tabBarLabel: 'Profile',
-          tabBarIcon: ({ color, size }) => (
-            <MaterialCommunityIcons name="account" color={color} size={size} />
-          ),
-        }}
-      />
-    </Tab.Navigator>
-  );
-}
+                {/* Bottom-Tab */}
+                <Tab.Navigator 
+                    initialRouteName='HomeScreen'
+                    screenOptions={({ route }) => ({
+                        headerShown: false,
+                        headerTransparent:true,
+                        tabBarActiveTintColor: '#0F49BA',
+                        tabBarInactiveTintColor: 'gray',
+                        tabBarIcon: ({ color, size }) => {
+                            if (route.name === 'Home') {
+                                return <MaterialCommunityIcons name='home' color={color} size={size}/>
+                            } else if (route.name === 'History') {
+                                return <MaterialCommunityIcons name='history' color={color} size={size}/>
+                            } else {
+                                return <MaterialCommunityIcons name='calendar-clock' color={color} size={size}/>
+                            }
+                        }
+                    })}
+                    listeners={({ route }) => ({
+                        tabPress: (e) => {
+                            if (route.name === 'Home') {
+                                this.setState({ headerTitle: 'Home' });
+                            } else if (route.name === 'History') {
+                                this.setState({ headerTitle: 'History' });
+                            } else {
+                                this.setState({ headerTitle: 'Reservation' });
+                            }
+                        },
+                    })}>
+                    <Tab.Screen name='Home' component={ HomeScreen } options={{ tabBarLabel: 'Home' }} />
+                    <Tab.Screen name='History' component={ HistoryScreen } options={{ tabBarLabel: 'History' }} />
+                    <Tab.Screen name='Reservation' component={ ReservationScreen } options={{ tabBarLabel: 'Reservation' }} />
+                </Tab.Navigator>
 
 ```

@@ -1,0 +1,36 @@
+## 카테고리
+
+- src
+  - assets
+    - fonts
+    - images
+    - animations
+  - common
+    - constants
+    - utils
+  - components
+  - data
+    - dao
+    - scheme
+    - model
+    - service
+  - modals
+  - navigation
+  - screens
+    - login
+    - home
+    - mypage
+    - ...
+
+- files
+  - api.js
+  - config.js
+  - color.js
+  - size.js
+  - HttpUtils.js
+  - PermissionUtils.js
+  - CommonModal.js
+  - RootStack.js
+  - Routes.js
+  - DrawerNavigator.js
+  - TabNavigator.js
